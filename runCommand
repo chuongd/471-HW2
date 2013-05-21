@@ -1,0 +1,1 @@
+/cse/courses/cse471/13sp/PIN/PIN/pin -t /cse/courses/cse471/13sp/hw2-shared/MultiCacheSim PinDriver.so -protos ./MSI SMPCache.so -numcaches 8 -out sim.out -- /usr/bin/gcc
