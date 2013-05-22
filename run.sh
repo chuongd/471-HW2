@@ -1,0 +1,3 @@
+/cse/courses/cse471/13sp/PIN/PIN/pin -t /cse/courses/cse471/13sp/hw2-shared/MultiCacheSim_PinDriver.so -stopOnProtoBug 1 -printOnProtoBug 1 -protos ./MESI_SMPCache.so -numcaches 16 -reference /cse/courses/cse471/13sp/hw2-shared/references/MESI_SMPCache.so -out sim_MESI.out -- /usr/bin/ls
+
+#/cse/courses/cse471/13sp/PIN/PIN/pin -t /cse/courses/cse471/13sp/hw2-shared/MultiCacheSim_PinDriver.so -protos ./MSI_SMPCache.so -numcaches 8 -out sim_MSI.out -- /usr/bin/du
