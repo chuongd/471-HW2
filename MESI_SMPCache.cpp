@@ -305,6 +305,7 @@ void MESI_SMPCache::writeLine(uint32_t wrPC, uint32_t addr){
     // book keeping
     numWriteMisses++;
     // silently switch the state to MODIFIED without needing the bus write
+    // and no need sending invalidate
     st->changeStateTo(MESI_MODIFIED); 
   }
   else{ //Write Hit
