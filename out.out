@@ -1,16 +1,16 @@
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-0,402102,10464,0,10464,10464,43,39,150766,2584,26,0,2121
+0,402645,10622,0,10622,10622,86,39,151028,2600,24,0,2124
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-1,3359,243,0,243,243,34,103,1929,146,7,0,67
+1,4714,303,0,303,303,53,117,2444,153,12,0,74
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-2,3346,220,0,220,220,61,47,1896,146,7,0,68
+2,3723,262,0,262,262,154,27,2077,148,7,0,71
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-3,2420,130,0,130,130,38,12,1547,132,5,0,56
+3,4044,282,0,282,282,150,39,2198,150,8,1,72
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-4,2693,200,0,200,200,96,17,1674,141,7,0,64
+4,3382,248,0,248,248,131,28,1936,146,7,0,69
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-5,2747,198,0,198,198,93,15,1677,141,7,0,64
+5,3383,249,0,249,249,154,13,1937,146,6,0,69
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-6,2418,130,0,130,130,42,11,1546,132,5,0,56
+6,3079,215,0,215,215,119,14,1818,142,6,0,65
 CPUId, numReadHits, numReadMisses, numReadOnInvalidMisses, numReadRequestsSent, numReadMissesServicedByOthers, numReadMissesServicedByShared, numReadMissesServicedByModified, numWriteHits, numWriteMisses, numWriteOnSharedMisses, numWriteOnInvalidMisses, numInvalidatesSent
-7,2420,129,0,129,129,41,10,1546,132,5,0,56
+7,3078,215,0,215,215,125,11,1817,142,6,0,65
