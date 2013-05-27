@@ -1,0 +1,1 @@
+/cse/courses/cse471/13sp/Benchmarks/parsec-2.1/bin/parsecmgmt -a info
