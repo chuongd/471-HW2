@@ -303,7 +303,8 @@ void MESI_SMPCache::writeLine(uint32_t wrPC, uint32_t addr){
   }// ADDING EXCLUSIVE for WRITE 
   else if (st->getState() == MESI_EXCLUSIVE){
     // book keeping
-    numWriteMisses++;
+    // numWriteMisses++;
+    nmWriteHits++;
     // silently switch the state to MODIFIED without needing the bus write
     // and no need sending invalidate
     st->changeStateTo(MESI_MODIFIED); 
