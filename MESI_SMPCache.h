@@ -12,12 +12,13 @@ public:
   public:
     bool isShared;
     // we might need this for reducing traffic later on
-    bool isExclusive;
+    bool isModified;
     bool providedData;
   
-    RemoteReadService(bool shrd, bool prov){
+    RemoteReadService(bool shrd, bool prov, bool mod){
       isShared = shrd;
       providedData = prov;
+      isModified = mod;
     }
   
   };

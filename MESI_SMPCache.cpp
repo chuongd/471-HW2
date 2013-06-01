@@ -85,7 +85,7 @@ MESI_SMPCache::RemoteReadService MESI_SMPCache::readRemoteAction(uint32_t addr){
          *1)The line was not shared (the false param)
          *2)The line was provided by otherCache, as only it had it cached
         */
-        return MESI_SMPCache::RemoteReadService(false,true);
+        return MESI_SMPCache::RemoteReadService(false,true,true);
 
       /*Other cache has recently read the line*/
       }else if(otherState->getState() == MESI_SHARED){  
@@ -94,7 +94,7 @@ MESI_SMPCache::RemoteReadService MESI_SMPCache::readRemoteAction(uint32_t addr){
          *1)The line was shared (the true param)
          *2)The line was provided by otherCache 
         */
-        return MESI_SMPCache::RemoteReadService(true,true);
+        return MESI_SMPCache::RemoteReadService(true,true,false);
 
       }// ADDING EXCLUSIVE STATE
       else if (otherState->getState() == MESI_EXCLUSIVE){
@@ -109,7 +109,7 @@ MESI_SMPCache::RemoteReadService MESI_SMPCache::readRemoteAction(uint32_t addr){
          *the only difference with MESI_MODIFIED is 
          * that MESI_EXCLUSIVE one does not require a write back to memory
         */
-        return MESI_SMPCache::RemoteReadService(false,true);
+        return MESI_SMPCache::RemoteReadService(false,true,false);
 
 
       /*Line was cached, but invalid*/
@@ -124,7 +124,7 @@ MESI_SMPCache::RemoteReadService MESI_SMPCache::readRemoteAction(uint32_t addr){
   }/*Done with other caches*/
 
   /*If all other caches were MESI_INVALID*/
-  return MESI_SMPCache::RemoteReadService(false,false);
+  return MESI_SMPCache::RemoteReadService(false,false,false);
 }
 
 
@@ -171,7 +171,7 @@ void MESI_SMPCache::readLine(uint32_t rdPC, uint32_t addr){
 
       if(rrs.isShared){
         numReadMissesServicedByShared++;
-      } else if (st->getState == MESI_MODIFIED){
+      } else if (rrs.isModified) {//else if (st->getState() == MESI_MODIFIED){
         numReadMissesServicedByModified++;
       }
       /*Fill the line with shared STATE*/
@@ -304,7 +304,7 @@ void MESI_SMPCache::writeLine(uint32_t wrPC, uint32_t addr){
   else if (st->getState() == MESI_EXCLUSIVE){
     // book keeping
     // numWriteMisses++;
-    nmWriteHits++;
+    numWriteHits++;
     // silently switch the state to MODIFIED without needing the bus write
     // and no need sending invalidate
     st->changeStateTo(MESI_MODIFIED); 
