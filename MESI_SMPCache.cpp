@@ -171,7 +171,7 @@ void MESI_SMPCache::readLine(uint32_t rdPC, uint32_t addr){
 
       if(rrs.isShared){
         numReadMissesServicedByShared++;
-      }else{
+      } else if (st->getState == MESI_MODIFIED){
         numReadMissesServicedByModified++;
       }
       /*Fill the line with shared STATE*/
@@ -181,7 +181,7 @@ void MESI_SMPCache::readLine(uint32_t rdPC, uint32_t addr){
     // data might be supplied by memory...so it should be exclusive
     else {
       // data is supplied by memory.....
-      numReadMissesServicedByOthers++;
+      //numReadMissesServicedByOthers++;
       // data is in exclusive state
       fillLine(addr,MESI_EXCLUSIVE); 
     }      
